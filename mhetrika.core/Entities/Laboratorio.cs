@@ -2,17 +2,14 @@
 
 namespace mhetrika.core.Entities
 {
-    public class Patient
+    public class Laboratorio
     {
         public int Id { get; set; }
-        public string Name { get; set; }
-        public string Gender { get; set; }
-        public DateTime BirthDate { get; set; }
-        public string Cpf { get; set; }
+        public string Nome { get; set; }
         public string Email { get; set; }
         public DateTime CreationDate { get; set; }
         public DateTime ModifiedDate { get; set; }
-        public int AddressId { get; set; }
+        public int AddresId { get; set; }
         public virtual Address Address { get; set; }
     }
 }
