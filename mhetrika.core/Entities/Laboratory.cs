@@ -2,10 +2,10 @@
 
 namespace mhetrika.core.Entities
 {
-    public class Laboratorio
+    public class Laboratory
     {
         public int Id { get; set; }
-        public string Nome { get; set; }
+        public string Name { get; set; }
         public string Email { get; set; }
         public DateTime CreationDate { get; set; }
         public DateTime ModifiedDate { get; set; }
