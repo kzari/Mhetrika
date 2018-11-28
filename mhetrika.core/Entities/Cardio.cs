@@ -5,6 +5,8 @@ namespace mhetrika.core.Entities
     public class Cardio
     {
         public int Id { get; set; }
+        public virtual Patient Patient { get; set; }
+        public int PatientId { get; set; }
         public int Pas { get; set; }
         public int Ldl_c { get; set; }
         public int Hdl_c { get; set; }
