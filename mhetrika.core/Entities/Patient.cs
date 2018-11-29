@@ -10,6 +10,7 @@ namespace mhetrika.core.Entities
         public DateTime BirthDate { get; set; }
         public string Cpf { get; set; }
         public string Email { get; set; }
+        public string Phone { get; set; }
         public virtual Address Address { get; set; }
         public int AddressId { get; set; }
         public DateTime CreationDate { get; set; }
