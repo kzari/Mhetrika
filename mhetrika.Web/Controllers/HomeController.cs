@@ -4,9 +4,9 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using mhetrika.Web.Models;
+using Mhetrika.Web.Models;
 
-namespace mhetrika.Web.Controllers
+namespace Mhetrika.Web.Controllers
 {
     public class HomeController : Controller
     {

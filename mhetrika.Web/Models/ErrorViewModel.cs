@@ -1,6 +1,6 @@
 using System;
 
-namespace mhetrika.Web.Models
+namespace Mhetrika.Web.Models
 {
     public class ErrorViewModel
     {
