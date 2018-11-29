@@ -6,7 +6,7 @@
 
 <div class="card-body">
     <!-- BEGIN FORM-->
-    @using (Html.BeginForm("Create", "Pacientes", FormMethod.Post, new { @class = "form-horizontal" }))
+    @using (Html.BeginForm("New", "Patient", FormMethod.Post, new { @class = "form-horizontal" }))
     {
         @Html.AntiForgeryToken()
 
@@ -103,7 +103,7 @@
         </div>
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Salvar" class="btn btn-success" />
+                <input type="submit" value="Cadastrar" class="btn btn-success" />
             </div>
         </div>
         <hr />
