@@ -20,7 +20,7 @@ namespace Mhetrika.Web.Controllers
         [HttpPost]
         public ActionResult New(PatientViewModel patientViewModel)
         {
-            var p = Mapper.Map<Patient>(patientViewModel);
+            var patient = Mapper.Map<Patient>(patientViewModel);
 
 
             return View();
