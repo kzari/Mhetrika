@@ -1,6 +1,8 @@
-﻿namespace mhetrika.core.Interfaces
+﻿using mhetrika.core.Entities;
+
+namespace mhetrika.core.Interfaces
 {
-    public interface IPatientRepository
+    public interface IPatientRepository : IRepositoryBase<Patient>
     {
 
     }

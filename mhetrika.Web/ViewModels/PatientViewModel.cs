@@ -10,11 +10,6 @@ namespace Mhetrika.Web.ViewModels
         public string Cpf { get; set; }
         public string Email { get; set; }
         public string Phone { get; set; }
-        public string Cep { get; set; }
-        public byte Number { get; set; }
-        public string Street { get; set; }
-        public string Neighbourhood { get; set; }
-        public string City { get; set; }
-        public string Uf { get; set; }
+        public AddressViewModel AddressViewModel { get; set; }
     }
 }

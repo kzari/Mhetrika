@@ -9,6 +9,7 @@ namespace Mhetrika.Web.Mappings
         public DomainToViewModelMappingProfile()
         {
             CreateMap<Patient, PatientViewModel>();
+            CreateMap<Address, AddressViewModel>();
         }
     }
 }

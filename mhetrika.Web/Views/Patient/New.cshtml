@@ -71,44 +71,44 @@
         <div class="form-group">
             <label class="control-label col-md-3">CEP:</label>
             <div class="col-md-6">
-                @Html.EditorFor(model => model.Cep, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Cep, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.Address.Cep, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Address.Cep, "", new { @class = "text-danger" })
             </div>
         </div>
         <div class="form-group">
             <label class="control-label col-md-3">UF:</label>
             <div class="col-md-6">
-                @Html.EditorFor(model => model.Uf, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Uf, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.Address.Uf, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Address.Uf, "", new { @class = "text-danger" })
             </div>
         </div>
         <div class="form-group">
             <label class="control-label col-md-3">Cidade:</label>
             <div class="col-md-6">
-                @Html.EditorFor(model => model.City, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.City, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.Address.City, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Address.City, "", new { @class = "text-danger" })
             </div>
         </div>
         <div class="form-group">
             <label class="control-label col-md-3">Bairro:</label>
             <div class="col-md-6">
-                @Html.EditorFor(model => model.Neighbourhood, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Neighbourhood, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.Address.Neighbourhood, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Address.Neighbourhood, "", new { @class = "text-danger" })
             </div>
         </div>
         <div class="form-group">
             <label class="control-label col-md-3">Rua:</label>
             <div class="col-md-6">
-                @Html.EditorFor(model => model.Street, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.Address.Street, new { htmlAttributes = new { @class = "form-control" } })
 
-                @Html.ValidationMessageFor(model => model.Street, "", new { @class = "text-danger" })
+                @Html.ValidationMessageFor(model => model.Address.Street, "", new { @class = "text-danger" })
             </div>
         </div>
         <div class="form-group">
             <label class="control-label col-md-3">Número:</label>
             <div class="col-md-6">
-                @Html.EditorFor(model => model.Number, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Number, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.Address.Number, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Address.Number, "", new { @class = "text-danger" })
             </div>
         </div>
         <div class="form-group">

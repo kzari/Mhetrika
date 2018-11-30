@@ -20,7 +20,20 @@ namespace Mhetrika.Web.Controllers
         [HttpPost]
         public ActionResult New(PatientViewModel patientViewModel)
         {
-            var patient = Mapper.Map<Patient>(patientViewModel);
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    var patient = Mapper.Map<Patient>(patientViewModel);
+                }
+                catch (System.Exception ex)
+                {
+                    TempData["Title"] = "Erro";
+                    TempData["Message"] = $"Ocorreu um erro ao tentar cadastrar o paciente. {ex.Message}";
+
+                    return View();
+                }
+            }
 
             return View();
         }
