@@ -22,7 +22,6 @@ namespace Mhetrika.Web.Controllers
         {
             var patient = Mapper.Map<Patient>(patientViewModel);
 
-
             return View();
         }
     }
