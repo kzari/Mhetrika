@@ -7,13 +7,6 @@ namespace Mhetrika.Web.Controllers
 {
     public class PatientController : Controller
     {
-        private readonly IMapper _mapper;
-
-        public PatientController(IMapper mapper)
-        {
-            mapper = _mapper;
-        }
-
         public IActionResult Index()
         {
             return View();
