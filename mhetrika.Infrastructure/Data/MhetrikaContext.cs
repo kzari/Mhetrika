@@ -1,4 +1,5 @@
 ﻿using mhetrika.core.Entities;
+using mhetrika.Infrastructure.Data.Mappings;
 using Microsoft.EntityFrameworkCore;
 
 namespace mhetrika.Infrastructure.Data
@@ -15,6 +16,13 @@ namespace mhetrika.Infrastructure.Data
         public DbSet<Quiz> Quizzes { get; set; }
         public DbSet<Medicament> Medicaments { get; set; }
         public DbSet<Response> Responses { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfiguration(new AddressMap());
+
+
+        }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

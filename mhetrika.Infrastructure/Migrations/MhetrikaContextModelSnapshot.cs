@@ -25,17 +25,28 @@ namespace mhetrika.Infrastructure.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Cep");
+                    b.Property<string>("Cep")
+                        .IsRequired()
+                        .HasColumnType("varchar(10)");
 
-                    b.Property<string>("City");
+                    b.Property<string>("City")
+                        .IsRequired()
+                        .HasColumnType("varchar(50)");
 
-                    b.Property<string>("Neighbourhood");
+                    b.Property<string>("Neighbourhood")
+                        .IsRequired()
+                        .HasColumnType("varchar(50)");
 
-                    b.Property<int>("Number");
+                    b.Property<int>("Number")
+                        .HasColumnType("int");
 
-                    b.Property<string>("Street");
+                    b.Property<string>("Street")
+                        .IsRequired()
+                        .HasColumnType("varchar(50)");
 
-                    b.Property<string>("Uf");
+                    b.Property<string>("Uf")
+                        .IsRequired()
+                        .HasColumnType("varchar(2)");
 
                     b.HasKey("Id");
 

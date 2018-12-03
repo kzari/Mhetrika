@@ -14,12 +14,12 @@ namespace mhetrika.Infrastructure.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Cep = table.Column<string>(nullable: true),
-                    Number = table.Column<byte>(nullable: false),
-                    Street = table.Column<string>(nullable: true),
-                    Neighbourhood = table.Column<string>(nullable: true),
-                    City = table.Column<string>(nullable: true),
-                    Uf = table.Column<string>(nullable: true)
+                    Cep = table.Column<string>(type: "varchar(10)", nullable: false),
+                    Number = table.Column<int>(type: "int", nullable: false),
+                    Street = table.Column<string>(type: "varchar(50)", nullable: false),
+                    Neighbourhood = table.Column<string>(type: "varchar(50)", nullable: false),
+                    City = table.Column<string>(type: "varchar(50)", nullable: false),
+                    Uf = table.Column<string>(type: "varchar(2)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -113,6 +113,7 @@ namespace mhetrika.Infrastructure.Migrations
                     BirthDate = table.Column<DateTime>(nullable: false),
                     Cpf = table.Column<string>(nullable: true),
                     Email = table.Column<string>(nullable: true),
+                    Phone = table.Column<string>(nullable: true),
                     AddressId = table.Column<int>(nullable: false),
                     CreationDate = table.Column<DateTime>(nullable: false),
                     ModifiedDate = table.Column<DateTime>(nullable: false)
