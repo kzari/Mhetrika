@@ -22,6 +22,7 @@ namespace mhetrika.Infrastructure.Data
             modelBuilder.ApplyConfiguration(new AddressMap());
             modelBuilder.ApplyConfiguration(new PatientMap());
             modelBuilder.ApplyConfiguration(new UserMap());
+            modelBuilder.ApplyConfiguration(new DoctorMap());
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
