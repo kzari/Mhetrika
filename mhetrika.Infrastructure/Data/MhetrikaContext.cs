@@ -20,8 +20,8 @@ namespace mhetrika.Infrastructure.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new AddressMap());
-
-
+            modelBuilder.ApplyConfiguration(new PatientMap());
+            modelBuilder.ApplyConfiguration(new UserMap());
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
