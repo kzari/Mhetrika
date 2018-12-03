@@ -120,3 +120,44 @@
     }
 </div>
 
+<script>
+    $(document).ready(function () {
+
+        $("#Cpf").mask('000.000.000-00', { reverse: true });
+        $("#Phone").mask('(00)00000-0000')
+        $("#AddressViewModel_Cep").mask('00000-000');
+        $("#AddressViewModel_Uf").mask('AA');
+        $("#AddressViewModel_Number").mask('000000');
+
+        // busca os dados do endereço pelo cep digitado
+        $("#AddressViewModel_Cep").focusout(function () {
+
+            var cep = $("#AddressViewModel_Cep").val();
+
+            if (cep != "") {
+
+                $.ajax({
+                    url: "https://viacep.com.br/ws/" + cep + "/json/",
+                    dataType: "json",
+                    success: function (data) {
+
+                        if (!("erro" in data)) {
+                            $("#AddressViewModel_Uf").val(data.uf);
+                            $("#AddressViewModel_City").val(data.localidade);
+                            $("#AddressViewModel_Neighbourhood").val(data.bairro);
+                            $("#AddressViewModel_Street").val(data.logradouro);
+                            $("#AddressViewModel_Number").focus();
+                        }
+                        else {
+                            alert("CEP não encontrado. Tente novamente ou preencha o endereço manualmente.")
+                        }
+                    },
+                    error: function () {
+                        alert("CEP em formato inválido.");
+                    }
+                });
+            }
+        });
+    })
+</script>
+
